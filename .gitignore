@@ -1,5 +1,5 @@
 # Ignorar las imágenes de la base de datos (locales)
-data/
+data/raw
 
 # Ignorar archivos temporales de Python y Jupyter
 __pycache__/
