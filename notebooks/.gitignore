@@ -1,1 +1,6 @@
+# Bloquear CSVs temporales en general
 *.csv
+
+# EXCEPCIONES: Permitir subir los archivos oficiales en processed
+!../data/processed/metricas_nucleos_otsu.csv
+!../data/processed/metricas_completas_watershed.csv
