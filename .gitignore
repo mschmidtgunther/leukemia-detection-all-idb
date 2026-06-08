@@ -1,5 +1,5 @@
-# Ignorar las imágenes de la base de datos (locales)
-data/
+# Ignorar contenido de data
+data/**
 
 *.jpg
 *.jpeg
@@ -10,7 +10,11 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-# mantener el .gitkeep
+# Pero mantener los .gitkeep
+!data/
+!data/raw/
+!data/raw/Original/
+!data/raw/Original/.gitkeep
 !data/raw/.gitkeep
+!data/clasificacion/
 !data/clasificacion/.gitkeep
-!data/processed/.gitkeep
