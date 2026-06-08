@@ -36,7 +36,7 @@ from src.segmentation import (
 from src.multclasificador import procesar_lote_ciego
 
 # ==============================================================================
-# NUEVA VENTANA: RESULTADOS DEL LOTE (GRÁFICOS DE BARRAS)
+# RESULTADOS DEL LOTE (GRÁFICOS DE BARRAS)
 # ==============================================================================
 class VentanaReporteLote(QDialog):
     def __init__(self, df_resultados):
@@ -86,8 +86,8 @@ class VentanaReporteLote(QDialog):
             else:
                 texto = '0\n(0%)'
             ax1.text(bar.get_x() + bar.get_width()/2, bar.get_height(), texto, 
-                     ha='center', va='bottom', fontweight='bold', fontsize=10)
-                     
+                    ha='center', va='bottom', fontweight='bold', fontsize=10)
+                    
         limite_y1 = max(counts_1) * 1.2 if max(counts_1) > 0 else 10
         ax1.set_ylim(0, limite_y1)
 
@@ -108,13 +108,13 @@ class VentanaReporteLote(QDialog):
                 porcentaje = (count / cancerigenas) * 100
                 texto = f'{count}\n({porcentaje:.1f}%)'
                 ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height(), texto, 
-                         ha='center', va='bottom', fontweight='bold', fontsize=10)
-                         
+                        ha='center', va='bottom', fontweight='bold', fontsize=10)
+                        
             ax2.set_ylim(0, max(counts_2) * 1.2)
         else:
             ax2.text(0.5, 0.5, 'No se detectaron células\ncancerígenas en la muestra.', 
-                     horizontalalignment='center', verticalalignment='center', 
-                     fontsize=12, fontweight='bold', color='grey')
+                    horizontalalignment='center', verticalalignment='center', 
+                    fontsize=12, fontweight='bold', color='grey')
             ax2.axis('off')
 
         self.canvas.figure.tight_layout()
@@ -122,7 +122,7 @@ class VentanaReporteLote(QDialog):
 
 
 # ==============================================================================
-# VENTANA: INSTRUCCIONES PARA MÚLTIPLES IMÁGENES  ← CORREGIDA
+# INSTRUCCIONES PARA MÚLTIPLES IMÁGENES 
 # ==============================================================================
 class DialogoInstrucciones(QDialog):
     def __init__(self, parent=None):
@@ -145,17 +145,17 @@ class DialogoInstrucciones(QDialog):
             "Para analizar múltiples imágenes en lote, asegúrese de cumplir con:\n\n"
             "  1.  Todos los archivos deben estar en formato  .jpg  o  .png\n\n"
             "  2.  Las imágenes deben estar ubicadas en la siguiente ruta:\n\n"
-            "         👉  ./data/clasificacion"
+            "           ./data/clasificacion"
         )
         lbl_info.setFont(QFont("Segoe UI", 10))
         lbl_info.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
         lbl_info.setStyleSheet("color: #495057; background-color: #ffffff; "
-                               "border: 1px solid #dee2e6; border-radius: 6px; padding: 12px;")
+                            "border: 1px solid #dee2e6; border-radius: 6px; padding: 12px;")
         lbl_info.setWordWrap(True)
         # El label crece tanto como necesite verticalmente
         lbl_info.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
 
-        btn_aceptar = QPushButton("✅  Aceptar e Iniciar Clasificación")
+        btn_aceptar = QPushButton("Aceptar e Iniciar Clasificación")
         btn_aceptar.setFixedSize(270, 42)
         btn_aceptar.setFont(QFont("Segoe UI", 10, QFont.Bold))
         btn_aceptar.setStyleSheet("background-color: #f59f00; color: white; border-radius: 6px;")
@@ -171,9 +171,9 @@ class DialogoInstrucciones(QDialog):
 
 
 # ==============================================================================
-# VENTANA SECUNDARIA: VISUALIZACIÓN DEL PASO A PASO  ← CORREGIDA
+# VISUALIZACIÓN DEL PASO A PASO  
 # ==============================================================================
-# Tamaño de cada imagen. Bajá este número si la ventana se ve muy grande.
+# Tamaño de cada imagen. 
 IMG_SIZE = 300
 
 class VentanaResultados(QDialog):
@@ -318,7 +318,9 @@ class LeucemiaApp(QMainWindow):
         self.lbl_subtitulo.setFont(QFont("Segoe UI", 11))
         self.lbl_subtitulo.setAlignment(Qt.AlignCenter)
         self.lbl_subtitulo.setStyleSheet("color: #495057;")
-        
+
+        # Estan re lindos los emojis si no queda re fea la interfaz, pero si querés sacarlos no hay drama.
+
         self.btn_individual = QPushButton("🔍 PROCESAR IMAGEN INDIVIDUAL (Paso a Paso)")
         self.btn_individual.setFixedSize(350, 55)
         self.btn_individual.setStyleSheet("background-color: #339af0; color: white; border: 1px solid #228be6;")
