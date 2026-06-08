@@ -14,13 +14,14 @@ La interfaz desarrollada permite el analisis de imágenes individuales, múltipl
 
 - Clasificación individual: Sin requisitos
 - Clasificación Grupal: Requiere que las imágenes esten en formato .jpg o .png y que se encuentren en:
-                `.data/clasificacion`
+`.data/clasificacion`
+
 - Evaluación con Base de datos: Requiere que la base de datos se encuentre en:
-                `data/raw/Original`
-                            `/Benign`: Para frontis con células sanas
-                            `/Early`: Para frontis con Linfoblastos en etapa temprana
-                            `/Pre`: Para frontis con Linfoblastos pre-B o pre-T
-                            `/Pro`: Para frontis con Prolinfoblastos
+`data/raw/Original`
+- `/Benign`: Para frontis con células sanas
+- `/Early`: Para frontis con Linfoblastos en etapa temprana
+- `/Pre`: Para frontis con Linfoblastos pre-B o pre-T
+- `/Pro`: Para frontis con Prolinfoblastos
 
 
 ## Estructura del Proyecto
