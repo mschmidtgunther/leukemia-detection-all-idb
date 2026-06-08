@@ -1,3 +1,4 @@
+"Clasificación de las imágenes en base a las características extraídas"
 
 def clasificar_celula_v4(row):
     """
