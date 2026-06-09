@@ -66,8 +66,6 @@ def extract_dataset_features(dataset):
                     porcentaje_rosado = calcular_porcentaje_rosado_total(img_original, mask_celula_completa)
                     
                     # -----------------------------------------------------------------
-                    # NUEVA CARACTERÍSTICA: Rugosidad del Núcleo
-                    # -----------------------------------------------------------------
                     # Pasamos la imagen original a escala de grises para medir la textura del núcleo
                     gray = cv2.cvtColor(img_original, cv2.COLOR_RGB2GRAY)
                     # Extraemos únicamente los píxeles que pertenecen al núcleo analizado
