@@ -10,7 +10,7 @@ Para el desarrollo del proyecto se utilizó **ALL-IDB** (Acute Lymphoblastic Leu
 
 ## Interfaz
 
-La interfaz desarrollada permite el analisis de imágenes individuales, múltiples imágenes y una evaluación del proyecto con una base de datos
+La interfaz desarrollada permite el analisis de imágenes individuales, múltiples imágenes y una evaluación del proyecto con una base de datos. Para ejecutarla se utiliza el terminal y se corre `python gui.py`
 
 - Clasificación individual: Sin requisitos
 - Clasificación Grupal: Requiere que las imágenes esten en formato .jpg o .png y que se encuentren en:
